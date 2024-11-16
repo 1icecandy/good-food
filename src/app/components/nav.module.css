@@ -1,0 +1,15 @@
+.nav{
+    text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    font-weight: 500;
+    font-size: 0.7rem;
+    color:var(--ivory);
+}
+
+.nav div{
+    background-color:var(--transparent-bg);
+    padding: 0.8rem ;
+    border-radius: 50px / 100%; 
+}
