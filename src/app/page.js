@@ -33,7 +33,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       {viewportSize === "smScreen" && <Nav />} {/* Corrected to use 'viewportSize' */}
-      <Hero></Hero>
+      {viewportSize === "smScreen" && <Hero/>} {/* Corrected to use 'viewportSize' */}
     </div>
   );
 }
