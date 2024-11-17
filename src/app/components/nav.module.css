@@ -6,10 +6,18 @@
     font-weight: 500;
     font-size: 0.7rem;
     color:var(--ivory);
+   z-index: 999;
+   position: fixed;
+   width: 100%;
+  
 }
 
 .nav div{
     background-color:var(--transparent-bg);
     padding: 0.8rem ;
     border-radius: 50px / 100%; 
+}
+
+.nav div:hover{
+    cursor: pointer;
 }

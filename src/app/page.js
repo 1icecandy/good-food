@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import styles from "./page.module.css";
 //import { gsap } from "gsap";
 import Nav from "./components/Nav";
+import Hero from "./components/Hero";
 
 export default function Home() {
   const [viewportSize, setViewportSize] = useState(""); // Initial state is an empty string
@@ -32,6 +33,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       {viewportSize === "smScreen" && <Nav />} {/* Corrected to use 'viewportSize' */}
+      <Hero></Hero>
     </div>
   );
 }
