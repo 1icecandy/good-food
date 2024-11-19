@@ -1,9 +1,15 @@
 "use client";
 import { useState, useEffect } from "react";
+
+import Lenis from "lenis";
+
 import styles from "./page.module.css";
-//import { gsap } from "gsap";
+
 import Nav from "./components/Nav";
 import Hero from "./components/Hero";
+import Why from "./components/Why";
+import Who from "./components/Who";
+import What from "./components/What";
 
 export default function Home() {
   const [viewportSize, setViewportSize] = useState(""); // Initial state is an empty string
@@ -17,6 +23,7 @@ export default function Home() {
     }
   };
 
+  //effect to distinguish between viewport sizes
   useEffect(() => {
     // Calculate viewport size on initial render
     calculateViewportSize();
@@ -30,10 +37,23 @@ export default function Home() {
     };
   }, []); // Empty dependency array means this effect runs only once
 
+  //effect to implement smooth scrolling 
+  useEffect(()=>{
+    const lenis = new Lenis();
+    function raf(time){
+      lenis.raf(time);
+      requestAnimationFrame(raf)
+    }
+    requestAnimationFrame(raf)
+   },[])
+
   return (
     <div className={styles.page}>
       {viewportSize === "smScreen" && <Nav />} {/* Corrected to use 'viewportSize' */}
-      {viewportSize === "smScreen" && <Hero/>} {/* Corrected to use 'viewportSize' */}
+    <Hero />
+    <Why />
+    <Who />
+    <What/>
     </div>
   );
 }

@@ -20,6 +20,9 @@ body {
   overflow-x: hidden;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
 body {
   background: var(--ivory);
   font-family: Arial, Helvetica, sans-serif;

@@ -32,6 +32,7 @@ export default function Hero() {
                     src={heroImg}  // Dynamically set the image source
                     alt="food image"  // Alt text for accessibility
                     fill  // Makes the image fill the parent container
+                    className={styles.heroImg}
                 />
             )}
 

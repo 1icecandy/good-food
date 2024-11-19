@@ -5,6 +5,9 @@
     object-fit: cover;
 }
 
+.heroImg {
+    object-fit: cover;
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -25,13 +28,11 @@
 .heroText{
     font-family: var(--regular);
     font-size: 10rem;
-    font-weight: 900;
-    
-    
+
 }
 
 .overlay p{
     max-width: 40%;
     width: 40%;
-    font-size: 0.6rem;
+    font-size: 0.7rem;
 }
